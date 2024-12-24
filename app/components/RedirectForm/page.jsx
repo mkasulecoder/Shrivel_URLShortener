@@ -9,7 +9,7 @@ const RedirectForm = () => {
   const [customName, setCustomName] = useState("");
   const [originalUrl, setURL] = useState("");
   const [postStatus, setPostStatus] = useState("");
-  const [getUrls, setGetURls] = useState([]);
+  const [getUrls, setGetURLs] = useState([]);
 
   const handleUserInput = async (event) => {
     event.preventDefault();
@@ -28,19 +28,19 @@ const RedirectForm = () => {
       setPostStatus("URL Added Successfully");
       setTimeout(() => setPostStatus(""), 2000);
 
-      // Fetch data from db
       const getResponse = await fetch(api, {
         method: "GET",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
 
       if (!getResponse.ok) {
-        throw new Error(
-          `Failed to get URLs from the DB: ${getResponse.status}`
-        );
+        throw new Error("Failed to fetch all urls from DB");
       }
+
       const { data: res_get_urls } = await getResponse.json();
-      setGetURls(res_get_urls);
+      setGetURLs(res_get_urls);
     } catch (err) {
       throw new Error(`Server Error, ${err}`);
     }

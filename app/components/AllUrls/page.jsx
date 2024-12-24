@@ -1,3 +1,5 @@
+import CopyBtn from "@/app/components/CopyBtn/page";
+
 const AllURLs = ({ allUrls, originalURL }) => {
   return (
     <>
@@ -23,6 +25,7 @@ const AllURLs = ({ allUrls, originalURL }) => {
                         {matching_url.shortened_url}
                       </span>
                       <span className='text-teal-500 px-5 line-clamp-1'></span>
+                      <CopyBtn shortURL={ matching_url.shortened_url} />
                     </div>
                   </div>
                 ))
