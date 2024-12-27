@@ -6,7 +6,8 @@ Shrivel is a modern URL shortener application built with Next.js 15, leveraging 
 
 
 ## Watch Full Tutorial Here
-👉 https://www.youtube.com/@elitebytecode
+👉 [![Build and Deploy a Full Stack URL-Shortener with Next.js 15](https://img.youtube.com/vi/HU2Gvj0uTcs/0.jpg)](https://youtu.be/HU2Gvj0uTcs)
+
 
 ## Features
 
