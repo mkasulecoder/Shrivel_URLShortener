@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='max-w-screen-xl flex flex-col mx-auto px-4 text-gray-600 md:px-8'>
           <div className='justify-between sm:flex'>
             <div className='space-y-6'>
-              <div className='flex flex-row justify-center items-center'>
+              <div className='flex flex-row justify-start dm:justify-center items-center'>
                 <Image
                   src={"./shrivel-logo.svg"}
                   width={20}
