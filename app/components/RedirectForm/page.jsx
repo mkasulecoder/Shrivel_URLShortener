@@ -27,7 +27,9 @@ const RedirectForm = () => {
 
       setPostStatus("URL Added Successfully");
       setTimeout(() => setPostStatus(""), 2000);
+      
 
+      // Fetch All URLS from the DB
       const getResponse = await fetch(api, {
         method: "GET",
         headers: {
@@ -74,10 +76,10 @@ const RedirectForm = () => {
                 className='w-full px-3 py-2.5 bg-white focus:bg-neutral-100 duration-150 outline-none rounded-lg shadow sm:max-w-sm smw:w-auto'
               />
             </div>
-            <div className='flex flex-row justify-between items-center space-x-4'>
+            <div className='flex flex-col md:w-4/5 md:flex-row justify-center md:justify-between items-center space-x-4'>
               <button
                 type='submit'
-                className='flex items-center justify-center gap-x-2 py-2.5 px-4 w-full text-sm text-white font-semibold bg-teal-600 duration-150 rounded-lg sm:mt-0 sm:w-auto'
+                className='flex items-center justify-center gap-x-2 py-2.5 px-4  w-full text-sm text-white font-semibold bg-teal-600 duration-150 rounded-lg sm:mt-0 sm:w-auto'
               >
                 Shorten URL
                 <svg
